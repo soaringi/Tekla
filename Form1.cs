@@ -78,5 +78,18 @@ namespace _2021
             }
 
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            DrawingHandler drawingHandler = new DrawingHandler();
+            GADrawing drawing = drawingHandler.GetActiveDrawing() as GADrawing;
+            var b = drawingHandler.GetDrawingObjectSelector().GetSelected();
+            while (b.MoveNext())
+            {
+                var mar = b.Current;
+                var a=mar.GetType().ToString();
+            }
+
+        }
     }
 }
